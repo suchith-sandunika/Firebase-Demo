@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
     "firebase": "^11.5.0",
+    "firebase-tools": "^14.0.1",
     "frontend": "file:",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
