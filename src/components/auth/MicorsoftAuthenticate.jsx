@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
-import { getAuth, GithubAuthProvider, signInWithPopup } from "firebase/auth";
+import { getAuth, OAuthProvider, signInWithPopup } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
 import { app } from '../../firebaseConfig';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const GitHubAuthenticate = () => {
+const MicrosoftAuthenticate = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
     let auth = getAuth(app);
-    let githubprovider = new GithubAuthProvider();
+    let authProvider = new OAuthProvider('microsoft.com');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -18,9 +18,9 @@ const GitHubAuthenticate = () => {
             toast.error("Please fill all fields", { position: "top-center" });
             return;
         }  
-    
-        // GitHub Authentication ...
-        signInWithPopup(auth, githubprovider)
+        
+        // Microsoft Authentication ...
+        signInWithPopup(auth, authProvider)
         .then((response) => {
             console.log(response);
         })
@@ -56,4 +56,4 @@ const GitHubAuthenticate = () => {
     );
 }
 
-export default GitHubAuthenticate;
+export default MicrosoftAuthenticate;

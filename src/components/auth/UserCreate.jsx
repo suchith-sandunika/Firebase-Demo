@@ -8,7 +8,7 @@ const UserCreate = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    let auth = getAuth();
+    let auth = getAuth(app);
 
     const handleSubmit = (e) => {
         e.preventDefault();

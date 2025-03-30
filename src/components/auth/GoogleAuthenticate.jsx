@@ -8,7 +8,7 @@ const GoogleAuthenticate = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     
-    let auth = getAuth();
+    let auth = getAuth(app);
     let googleProvider = new GoogleAuthProvider();
 
     const handleSubmit = (e) => {

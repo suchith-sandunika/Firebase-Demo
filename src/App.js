@@ -8,7 +8,9 @@ import Home from './components/base/Home';
 import UserCreate from './components/auth/UserCreate';
 import UserSignIn from './components/auth/UserSignIn';
 import GoogleAuthenticate from './components/auth/GoogleAuthenticate';
+import FacebookAuthenticate from './components/auth/FacebookAuthenticate';
 import GitHubAuthenticate from './components/auth/GitHubAuthenticate';
+import MicrosoftAuthenticate from './components/auth/MicorsoftAuthenticate';
 
 import StoreFilesInDB from './components/database/StoreFilesInDB';
 import ViewStoredData from './components/database/ViewStoredData';
@@ -31,7 +33,9 @@ function App() {
         <Route path="/auth/create" element={<UserCreate/>} />
         <Route path="/auth/signin" element={<UserSignIn/>} />
         <Route path='/auth/google-auth' element={<GoogleAuthenticate/>}/>
+        <Route path='/auth/facebook-auth' element={<FacebookAuthenticate/>}/>
         <Route path='/auth/github-auth' element={<GitHubAuthenticate/>}/>
+        <Route path='/auth/microsoft-auth' element={<MicrosoftAuthenticate/>}/>
 
         {/* -database- */}
         <Route path='/database/store' element={<StoreFilesInDB/>}/>
